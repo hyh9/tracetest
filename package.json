@@ -1,0 +1,19 @@
+{
+  "name": "cat-news-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "猫咪生活报 · 编辑部工作台（Vue 3 + Vite）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.0",
+    "vite": "^5.2.0"
+  }
+}
