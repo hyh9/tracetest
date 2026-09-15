@@ -13,7 +13,7 @@ const layout = () => props.x.layout || 'default'
 <template>
   <div class="rec" :class="'rec-layout-' + layout()">
     <div class="acts">
-      <button class="pin-btn" :class="{ on: x.pinned }" title="置顶" @click.stop="togglePin(m.key, x.id)"><Icon name="star" :size="15" /></button>
+      <button v-if="!m.remote" class="pin-btn" :class="{ on: x.pinned }" title="置顶" @click.stop="togglePin(m.key, x.id)"><Icon name="star" :size="15" /></button>
       <button class="del" title="删除" @click.stop="removeRecord(m.key, x.id)"><Icon name="trash" :size="15" /></button>
     </div>
 

@@ -6,9 +6,9 @@ import InsightView from './views/InsightView.vue'
 import ModuleView from './views/ModuleView.vue'
 import EditorModal from './components/EditorModal.vue'
 import { onMounted, watch } from 'vue'
-const { view, editor, startClock } = useStore()
+const { view, editor, startClock, initRemote } = useStore()
 watch(editor, e => { document.body.style.overflow = e ? 'hidden' : '' })
-onMounted(startClock)
+onMounted(() => { startClock(); initRemote() })
 </script>
 
 <template>
