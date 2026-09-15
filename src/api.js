@@ -1,10 +1,10 @@
 /* ============================================================
    API — 前后端分离：封装后端 REST 接口 + 前后端字段映射。
-   默认指向 http://localhost:8080/api，可用 VITE_API_BASE 覆盖。
+   默认走同源 /api（由 Vite dev 代理转发到后端），生产可用 VITE_API_BASE 覆盖。
    后端统一返回 { code, msg, data }。
    ============================================================ */
 
-const BASE = (import.meta.env && import.meta.env.VITE_API_BASE) || 'http://localhost:8080/api'
+const BASE = (import.meta.env && import.meta.env.VITE_API_BASE) || '/api'
 
 async function request(method, url, body) {
   let res
